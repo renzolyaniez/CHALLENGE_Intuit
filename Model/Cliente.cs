@@ -21,6 +21,7 @@ namespace Model
 
         public string Domicilio { get; set; }
 
+        [Phone]
         [Required]
         public string Telefono { get; set; }
 

@@ -29,11 +29,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label asp-for="Fecha_Nacimiento" class="form-label">Fecha de Nacimiento</label>
-                        <input asp-for="Fecha_Nacimiento" type="date" class="form-control" required />
+                        <input asp-for="Fecha_Nacimiento" type="date" class="form-control" required max="@DateTime.Now.ToString("yyyy-MM-dd")" />
                     </div>
                     <div class="col-md-6">
                         <label asp-for="Cuit" class="form-label"></label>
-                        <input asp-for="Cuit" class="form-control" required />
+                        <input asp-for="Cuit" class="form-control" pattern="\d{2}-\d{8}-\d{1}" title="Formato: XX-XXXXXXXX-X" required />
                     </div>
                 </div>
 
@@ -44,13 +44,13 @@
                     </div>
                     <div class="col-md-6">
                         <label asp-for="Telefono" class="form-label"></label>
-                        <input asp-for="Telefono" class="form-control" />
+                        <input asp-for="Telefono" class="form-control" required />
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Email" class="form-label"></label>
-                    <input asp-for="Email" type="email" class="form-control" />
+                    <input asp-for="Email" type="email" class="form-control" required />
                 </div>
 
                 <div class="text-end">
