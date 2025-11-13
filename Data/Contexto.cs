@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Model;
+using Model.Model;
 
 namespace Data
 {
@@ -10,10 +11,10 @@ namespace Data
         {
         }
 
- 
-
         public DbSet<Cliente> Clientes { get; set; }
-    }
 
+        // Nuevo DbSet para logs de error
+        public DbSet<ErrorLog> ErrorLogs { get; set; }
+    }
 }
 
